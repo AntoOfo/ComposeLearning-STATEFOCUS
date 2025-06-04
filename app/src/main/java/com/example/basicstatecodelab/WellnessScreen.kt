@@ -6,5 +6,5 @@ import androidx.compose.ui.Modifier
 // this composable will represent the main screen
 @Composable
 fun WellnessScreen(modifier: Modifier = Modifier) {
-    WaterCounter(modifier)      // calling the water counter composable
+    StatefulCounter(modifier)      // calling the water counter composable
 }
