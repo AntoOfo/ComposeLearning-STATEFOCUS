@@ -21,8 +21,8 @@ import androidx.compose.ui.unit.dp
 @Composable
 fun WellnessTaskItem(
     taskName: String,
-    checked: Boolean,
-    onCheckedChange: (Boolean) -> Unit,
+    checked: Boolean,  // whether checkbox is checked
+    onCheckedChange: (Boolean) -> Unit, // callback for when checkbox is clicked
     onClose: () -> Unit,
     modifier: Modifier = Modifier
 ) {
@@ -34,7 +34,7 @@ fun WellnessTaskItem(
             text = taskName
         )
         Checkbox(
-            checked = checked,
+            checked = checked,  // display as checked or not
             onCheckedChange = onCheckedChange
         )
         IconButton(onClick = onClose) {
