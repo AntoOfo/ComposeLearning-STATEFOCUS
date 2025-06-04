@@ -10,7 +10,7 @@ fun getWellnessTasks() = List(30) { i -> WellnessTask(i, "Task # $i")}
 
 // composable to create list
 @Composable
-fun WellnessTaskList(
+fun WellnessTasksList(
     modifier: Modifier = Modifier,
     list: List<WellnessTask> = remember { getWellnessTasks() }
 ) {
