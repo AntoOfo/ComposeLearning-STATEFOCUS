@@ -17,35 +17,15 @@ import androidx.compose.ui.unit.dp
 // composable to handle water counter
 @Composable
 fun WaterCounter(modifier: Modifier = Modifier) {
-    // use mutableStateOf & remember instead of just count = 0
-    // this remembers most recent states during recompositions
     var count by remember { mutableStateOf(0) }
 
-
     Column(modifier = modifier.padding(16.dp)) {
+        var count by remember { mutableStateOf(0) }
         if (count > 0) {
-            // tracks if task item should be shown
-            var showTask by remember { mutableStateOf(true)}
-            if (showTask) {
-                WellnessTaskItem(
-                    onClose = { showTask = false },
-                    taskName = "Have you taken your 15 minute walk today?"
-                )
-            }
-            Text("You've had $count glasses")
+            Text("You've had $count glasses.")
         }
-
-        Row(Modifier.padding(top = 8.dp)) {
-            Button(
-                onClick = { count++ }, enabled = count < 10) {
-                Text("Add one")
-            }
-            Button(
-                onClick = { count = 0 },
-                Modifier.padding(start = 8.dp)) {
-                Text("Clear water count")
-            }
-
+        Button(onClick = { count++ }, Modifier.padding(top = 8.dp), enabled = count < 10) {
+            Text("Add one")
         }
     }
 }
