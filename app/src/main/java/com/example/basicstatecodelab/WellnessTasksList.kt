@@ -16,7 +16,7 @@ fun WellnessTaskList(
 ) {
     LazyColumn(modifier = modifier) {
         items(list) { task ->
-            WellnessTaskItem(taskName = task.label)
+            WellnessTaskItem(taskName = task.label)  // its called the stateful version
         }
     }
 }
