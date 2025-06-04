@@ -6,6 +6,8 @@ import androidx.compose.material3.Text
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 
+// composable to handle water counter
+// the STATE of this composable is the variable "count"
 @Composable
 fun WaterCounter(modifier: Modifier = Modifier) {
     val count = 0
