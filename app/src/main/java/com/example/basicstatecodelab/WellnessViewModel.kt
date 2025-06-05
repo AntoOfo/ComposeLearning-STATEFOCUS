@@ -18,6 +18,14 @@ class WellnessViewModel : ViewModel() {
     fun remove(item: WellnessTask) {
         _tasks.remove(item)
     }
+
+    // updates the checked state of a task
+    fun changeTaskChecked(item: WellnessTask, checked: Boolean) =
+        // finds the task in the _tasks list that has the same id as the given value
+        _tasks.find { it.id == item.id }?.let { task ->
+            // if found, it updates the checked value
+            task.checked = checked
+        }
 }
 
 
